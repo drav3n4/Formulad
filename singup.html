@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormulaOne</title>
+  <link rel="stylesheet" href="./sign up.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="login">
+    <form class="form-container">
+      <h1>Login</h1>
+
+      <label for="loginEmail">Email Addres</label>
+      <input type="text" id="loginEmail" class="custom-input" placeholder="email@example.com">
+
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" class="custom-input" placeholder="Enter Password">
+
+      <ul id="errorsLogin"></ul>
+
+      <div class="center">
+        <input type="submit" value="Login">
+      </div>
+    </form>
+    <p class="center white">
+      Don't have an account ?
+      <span class="custom-link" onclick="toggle()">Create account</span>
+    </p>
+  </div>
+
+  <!-- Register form -->
+  <div id="register" class="display-none">
+    <form class="form-container"onsubmit="event.preventDefault(); return validateForm()>
+      <h1>Create Account</h1>
+      <label for="username">UserName</label>
+      <input type="text" id="username" class="custom-input" placeholder="Your UserName">
+
+      <label for="registerEmail">Email Addres</label>
+      <input type="text" id="registerEmail" class="custom-input" placeholder="email@example.com">
+
+      <label for="registerPassword">Password</label>
+      <input type="password" id="loginPassword" class="custom-input" placeholder="Enter Password">
+
+      <label class="mt-20">
+        <input type="checkbox" id="checkbox">
+        I accept the <a href="#">Terms and Conditions</a>
+      </label>
+
+      <ul id="errorsRegister"></ul>
+
+      <div class="center">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+    <p class="center white">
+      Already have an account ?
+      <span class="custom-link" onclick="toggle()">Sign in</span>
+    </p>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
